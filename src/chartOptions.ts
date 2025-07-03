@@ -8,14 +8,14 @@ export const linearScaleOptions = {
     ticks: {
         format: {
             minimumFractionDigits: 0,
-            maximumFractionDigits: 0,
+            maximumFractionDigits: 2,
         },
     },
 } as ScaleOptionsByType<'linear'>;
 
 export const logarithmicScaleOptions = {
     type: 'logarithmic',
-    min: 1,
+    min: 0.01,
     max: 1000,
     ticks: {
         format: {

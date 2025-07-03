@@ -135,7 +135,7 @@ function modeOf(mode: keyof Card) {
 
 function cardDataFormat(card: Card, mode: keyof Card) {
     if (mode === 'interval' || mode === 'cumulativeInterval') {
-        return card[mode].toFixed(0);
+        return card[mode].toFixed(card[mode] < 1 ? 2 : 0);
     } else {
         return card[mode].toFixed(2);
     }
